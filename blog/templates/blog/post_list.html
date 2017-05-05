@@ -1,28 +1,15 @@
 <html>
-	<head>
-	<title>Break down system </title>
-	</head>
 
-	<body>
-	
-	<h1>Break down system</h1>
-	<br />
-	<br />
-	<h2>Details </h2>
-	<br />
-	<p>Hi there</p>
-	<p>It works</p>
+{{PostView}}
 
-	<ul><li>BD System</li><li>Ceters</li><li>Tech</li></ul>
-	<br />
-	<h3>Attended By </h3>
-	<br />
-	<br />
-	<br />	
-	<h6>Copy rights @EWB_sat </h6>
-
-
-	</body>
+<br />
+{%for post in PostView%}
+	<div>
+		<p>published : {{post.published_date}}</p>
+		<h1><a href="">{{post.title}}</a></h1>
+		<p>{{post.text|linebreaksbr}}</p>
+	</div>
+{%endfor%}
 
 
 </html>
